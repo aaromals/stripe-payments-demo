@@ -139,6 +139,7 @@
   await store.loadProducts();
 
   // Create the payment request.
+  
   const paymentRequest = stripe.paymentRequest({
     country: config.stripeCountry,
     currency: config.currency,
@@ -346,6 +347,7 @@
     }
   });
 
+// END PAYMENT
   // Handle new PaymentIntent result
   const handlePayment = paymentResponse => {
     const {paymentIntent, error} = paymentResponse;
